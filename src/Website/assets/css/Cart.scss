@@ -1,0 +1,249 @@
+.cart-box {
+  margin: 40px 0px;
+  .empty-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .btn1 {
+      outline: none;
+      border: none;
+      background-color: #ff2c2c;
+      color: white;
+      font-size: 17px;
+      text-transform: capitalize;
+      padding: 10px 15px;
+      border-radius: 40px;
+      border: 1px solid #ff2c2c;
+      text-decoration: none;
+      display: block;
+      width: 200px;
+      text-align: center;
+    }
+    .btn1:hover {
+      color: #ff2c2c;
+      background-color: transparent;
+      transition: all 0.3s ease-in-out;
+      border: 1px solid #ff2c2c;
+    }
+  }
+  .cart-table {
+    thead {
+      tr {
+        td {
+          color: #797979;
+          font-size: 15px;
+          font-weight: 400;
+          text-transform: capitalize;
+        }
+      }
+    }
+    tbody {
+      tr {
+        td {
+          color: #301a22;
+          font-size: 16px;
+          font-weight: 400;
+          border-bottom: 1px solid #f3f3f3;
+          padding: 20px 0px;
+          .p-name {
+            border-left: 1px solid #f3f3f3;
+            padding-left: 40px;
+          }
+          .qty {
+            .box {
+              display: flex;
+              .number {
+                input {
+                  width: 40px;
+                  height: 60px;
+                  font-size: 16px;
+                  outline: none;
+                  border: 1px solid #f3f3f3;
+                  text-align: center;
+                  color: #301a22;
+                }
+              }
+              .btns {
+                display: flex;
+                flex-direction: column;
+                .add,
+                .sub {
+                  outline: none;
+                  font-size: 17px;
+                  border: 1px solid #f3f3f3;
+                  background-color: transparent;
+                  color: #301a22;
+                }
+                .add:hover,
+                .sub:hover {
+                  color: #ff2c2c;
+                }
+              }
+            }
+          }
+          .btn1,
+          .btn2 {
+            outline: none;
+            border: none;
+            background-color: #ff2c2c;
+            color: white;
+            font-size: 17px;
+            text-transform: capitalize;
+            padding: 10px 15px;
+            border-radius: 40px;
+            border: 1px solid #ff2c2c;
+            text-decoration: none;
+            display: block;
+            width: 200px;
+            text-align: center;
+          }
+          .btn1:hover,
+          .btn2:hover {
+            color: #ff2c2c;
+            background-color: transparent;
+            transition: all 0.3s ease-in-out;
+            border: 1px solid #ff2c2c;
+          }
+          input[type="text"] {
+            outline: none;
+            border: 1px solid #f3f3f3;
+            font-size: 18px;
+            width: 100%;
+            padding: 10px 10px;
+            text-transform: capitalize;
+          }
+          .select-op {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-end;
+            .options {
+              text-transform: capitalize;
+              margin: 5px 0px;
+              input[type="radio"] {
+                visibility: hidden;
+              }
+              span {
+                padding: 0px 5px;
+              }
+              .radio-btn1:checked ~ .custom-radio1 {
+                i {
+                  color: #ff2c2c;
+                }
+              }
+              .radio-btn2:checked ~ .custom-radio2 {
+                i {
+                  color: #ff2c2c;
+                }
+              }
+              .radio-btn3:checked ~ .custom-radio3 {
+                i {
+                  color: #ff2c2c;
+                }
+              }
+              .radio-btn3:disabled ~ .custom-radio3 {
+                i {
+                  color: #9c9c9c;
+                }
+              }
+
+              .custom-radio {
+                display: inline;
+                border-radius: 50%;
+                padding: 0px 4px;
+                border: 1px solid #797979;
+                i {
+                  color: white;
+                  font-size: 15px;
+                }
+              }
+            }
+          }
+        }
+        .icon-btns {
+          color: #301a22;
+          padding: 0px 50px;
+          .fa-plus:hover,
+          .fa-minus:hover {
+            color: #ff2c2c;
+            cursor: pointer;
+          }
+
+          .fa-trash-alt {
+            color: #301a22;
+            font-size: 20px;
+          }
+          .fa-trash-alt:hover {
+            color: #ff2c2c;
+            cursor: pointer;
+          }
+          .fa-heart {
+            font-size: 20px;
+            color: #301a22;
+            margin: 0px 10px;
+            font-size: 30px;
+          }
+          .fa-heart:hover {
+            color: #ff2c2c;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+// media
+@media screen and (min-width: 300px) and (max-width: 450px) {
+  .cart-table {
+    thead {
+      tr {
+        display: inline-table;
+        td {
+          padding: 0px 10px;
+        }
+      }
+    }
+    tbody {
+      tr {
+        display: inline-table;
+        td {
+          padding: 0px 10px;
+          text-align: center;
+        }
+      }
+      .row-1,
+      .row-6 {
+        display: block;
+        td {
+          border-bottom: none !important;
+        }
+      }
+      .row-2 {
+        display: block;
+        padding: 0px 10px;
+        td {
+          border-bottom: none !important;
+        }
+      }
+      .row-3,
+      .row-5 {
+        display: block;
+        padding: 0px 10px;
+        td {
+          // border-bottom: none !important;
+          padding: 0px 3px !important;
+        }
+      }
+    }
+  }
+  .cart-box .cart-table tbody tr td .p-name {
+    padding-left: 0;
+    border: none;
+  }
+  .cart-box .cart-table tbody tr td .btn1,
+  .cart-box .cart-table tbody tr td .btn2 {
+    width: auto;
+    margin: 0px 30px;
+  }
+}

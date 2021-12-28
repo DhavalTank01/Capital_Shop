@@ -1,0 +1,84 @@
+.wishlist-table {
+  thead {
+    tr {
+      th {
+        color: #797979;
+        font-weight: 400;
+      }
+    }
+    .product {
+      width: 600px;
+    }
+    .price {
+      width: 80px;
+    }
+    .delete-icon {
+    }
+  }
+  tbody {
+    .wishlist-item {
+      padding: 10px 0px;
+      border-bottom: 1px solid #e3e3e3;
+      .product {
+        margin: 20px 0px;
+        span {
+          border-left: 1px solid lightgray;
+          padding-left: 40px;
+        }
+      }
+      .delete-icon {
+        text-align: center;
+        i {
+          font-size: 20px;
+        }
+        i:hover {
+          color: #ff2c2c;
+          cursor: pointer;
+        }
+      }
+    }
+    tr {
+      .btn1 {
+        margin-top: 20px;
+        text-decoration: none;
+        text-transform: capitalize;
+        background-color: #ff2c2c;
+        color: white;
+        padding: 10px 10px;
+        border-radius: 40px;
+        border: 1px solid #ff2c2c;
+        display: block;
+        width: 170px;
+        text-align: center;
+        transition: all 0.3s ease-in-out;
+      }
+      .btn1:hover {
+        background-color: white;
+        color: #ff2c2c;
+      }
+    }
+  }
+}
+@media screen and (min-width: 300px) and (max-width: 450px) {
+  .wishlist-table {
+    thead {
+      tr {
+        display: inline-table;
+        th {
+          padding: 0px 0px;
+        }
+      }
+    }
+    .tbody {
+      .wishlist-item {
+      }
+    }
+  }
+  .wishlist-table tbody .wishlist-item .product span {
+    border-left: none;
+    padding-left: 0px;
+  }
+  .wishlist-table tbody tr .btn1 {
+    width: 140px;
+  }
+}

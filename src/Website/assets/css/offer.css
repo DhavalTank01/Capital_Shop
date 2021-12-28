@@ -1,0 +1,25 @@
+/* .offer-box */
+.offer-box {
+  margin: 10px 0px 0px 0px;
+}
+.offer-box .box {
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.offer-box .box .offer-des {
+  padding: 10px 0px;
+  margin: 0px 0px;
+}
+.offer-box .box .offer-btn {
+  padding-top: 10px;
+  margin: 0px 10px;
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid white;
+}
+.offer-box .box .offer-btn:hover {
+  letter-spacing: 1px;
+}

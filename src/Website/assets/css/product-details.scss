@@ -1,0 +1,266 @@
+:root {
+  --mycolor1: #ff2c2c;
+  --mycolor2: #74706b;
+  --mycolor3: lightgray;
+}
+.product-details-section {
+  .product-box {
+    border: 1px solid var(--mycolor3);
+    margin: 40px 0px;
+    background-color: var(--mycolor1);
+    padding: 30px;
+    .prod-info {
+      display: flex;
+      gap: 20px;
+      .p-img img {
+        width: 310px;
+        height: 350px;
+        margin: auto;
+        display: block;
+      }
+      .p-details {
+        color: white;
+        p {
+          margin: 0;
+        }
+        .p-title {
+          font-size: 40px;
+          font-weight: 400;
+          text-transform: capitalize;
+          margin-bottom: 10px;
+        }
+        .seller-name {
+          font-style: 14px;
+          margin-bottom: 30px;
+        }
+        .p-price {
+          font-size: 30px;
+          font-weight: 500;
+          margin-bottom: 10px;
+        }
+        .rating-review {
+          font-size: 13px;
+          margin-bottom: 30px;
+          .rating {
+            margin-right: 5px;
+          }
+        }
+
+        .btns {
+          margin-top: 50px;
+          .cart-btn,
+          .wishlist-btn {
+            padding: 15px 25px;
+            font-size: 15px;
+            background-color: white;
+            color: var(--mycolor1);
+            text-transform: capitalize;
+            text-decoration: none;
+            border-radius: 60px;
+            margin-right: 10px;
+            text-transform: capitalize;
+            z-index: 10;
+          }
+          .cart-btn:hover,
+          .wishlist-btn:hover {
+            color: white;
+            background-color: #ff2c2c;
+            transition: color 0.4s ease;
+            box-shadow: 0px 3px 31px 2px rgb(207 207 207 / 70%);
+          }
+          .share-btn {
+            padding: 10px;
+            background: white;
+            border-radius: 50%;
+            text-decoration: none;
+            color: #ff2c2c;
+          }
+          .share-btn:hover {
+            color: white;
+            background-color: #ff2c2c;
+            transition: color 0.4s linear;
+            box-shadow: 0px 3px 31px 2px rgb(207 207 207 / 70%);
+          }
+        }
+      }
+    }
+  }
+  .product-details {
+    margin: 40px 0px;
+    .nav {
+      border: none;
+    }
+    .nav-tabs {
+      border: none;
+
+      .tab-link {
+        border-bottom: 1px solid lightgray;
+        color: black;
+        text-decoration: none;
+        margin-bottom: 20px;
+        padding: 20px 10px;
+        display: inline-block;
+      }
+      .tab-link.active {
+        border-bottom: 5px solid #ff2c2c;
+      }
+    }
+    .tab-content {
+      .comments {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .comment-item {
+          padding: 10px 0px;
+          display: flex;
+          border: 1px solid #c0c0c0;
+
+          border-radius: 10px;
+          .image {
+            display: flex;
+            img {
+              border-radius: 50%;
+              width: 100px;
+              height: 100px;
+              margin: auto 20px;
+              display: block;
+            }
+          }
+          .info {
+            .comment {
+              color: #777;
+              font-size: 15px;
+            }
+            .date-time-name {
+              display: flex;
+              justify-content: space-between;
+              .name {
+                color: #292621;
+                text-transform: capitalize;
+                font-size: 16px;
+                font-weight: 500;
+              }
+
+              .date {
+                color: #999;
+                font-size: 15px;
+                margin-right: 20px;
+              }
+            }
+          }
+        }
+        .comment-item:hover {
+          border-color: #ff2c2c;
+          cursor: pointer;
+          transition: all 0.3s ease;
+        }
+        .comment-item:hover .info .date-time-name .name {
+          color: #ff2c2c;
+          transition: all 0.3s ease;
+        }
+      }
+      .reviews {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .review-item {
+          padding: 10px 0px;
+          display: flex;
+          background: #fbf9ff;
+
+          border-radius: 10px;
+          .image {
+            display: flex;
+            img {
+              border-radius: 50%;
+              width: 100px;
+              height: 100px;
+              margin: auto 20px;
+              display: block;
+            }
+          }
+          .info {
+            .review {
+              color: #777;
+              font-size: 15px;
+            }
+            .date-time-name {
+              display: flex;
+              justify-content: space-between;
+              .name {
+                color: #292621;
+                text-transform: capitalize;
+                font-size: 16px;
+                font-weight: 500;
+              }
+              .name:hover {
+                color: #ff2c2c;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+        .review-item:hover {
+          cursor: pointer;
+        }
+        .review-item:hover .info .date-time-name .name {
+          color: #ff2c2c;
+          transition: all 0.3s ease;
+        }
+      }
+    }
+  }
+}
+
+// media
+@media screen and (min-width: 300px) and (max-width: 450px) {
+  .product-details-section .product-box .prod-info {
+    display: flex;
+    flex-direction: column;
+  }
+  .product-details-section .product-box .prod-info .p-details .btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .product-details-section .product-box .prod-info .p-details .btns {
+    a {
+      display: block;
+      text-align: center;
+      margin: 10px 0px;
+    }
+  }
+  .product-details-section .product-box .prod-info .p-details .btns .share-btn {
+    display: inline-flex;
+  }
+  .product-details-section .product-details .nav-tabs .tab-link {
+    padding: 20px 5px;
+  }
+  .product-details-section
+    .product-details
+    .tab-content
+    .comments
+    .comment-item {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+  .product-details-section
+    .product-details
+    .tab-content
+    .comments
+    .comment-item
+    .info
+    .date-time-name {
+    flex-direction: column;
+  }
+  .product-details-section .product-details .tab-content .reviews .review-item {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+}

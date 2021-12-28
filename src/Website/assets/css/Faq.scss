@@ -1,0 +1,90 @@
+.faq-box {
+  .faq-main-box {
+    margin: 40px 0px;
+    display: flex;
+    gap: 20px;
+    .faq-box1 {
+      color: black;
+      width: 32%;
+      .nav-tabs {
+        background-color: #f3ead8;
+        padding: 20px 100px;
+        .tab-link {
+          color: black;
+          text-decoration: none;
+          font-size: 20px;
+          font-weight: 800;
+          display: block;
+          padding: 10px 0px;
+          letter-spacing: 2px;
+          transition: color 0.3s ease-in-out;
+        }
+        .tab-link:hover {
+          color: #ff2c2c;
+        }
+        .tab-link.active {
+          color: #ff2c2c;
+          border-bottom: 3px solid #ff2c2c;
+        }
+      }
+    }
+    .faq-box2 {
+      color: black;
+      width: 100%;
+      .tab-content {
+        .tab-pane {
+          .faq-item {
+            margin-bottom: 20px;
+            .title {
+              font-size: 18px;
+              font-weight: 600;
+              .btn-primary {
+                background-color: transparent;
+                color: black;
+                display: block;
+                text-align: start;
+                width: 100% !important;
+                border-color: #f3ead8;
+                font-size: 18px;
+                font-weight: 500;
+              }
+              .btn-primary:focus {
+                box-shadow: none;
+              }
+
+              .icon {
+                float: right;
+              }
+            }
+            .title:hover {
+              cursor: pointer;
+            }
+
+            .answer-box {
+              .collapse {
+                .card-body {
+                  border: 1px solid #f3ead8;
+                  font-weight: 300;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// media
+@media screen and (min-width: 300px) and (max-width: 450px) {
+  .faq-box .faq-main-box {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .faq-box .faq-main-box .faq-box1 {
+    width: auto;
+  }
+  .nav {
+    flex-direction: column;
+  }
+}
