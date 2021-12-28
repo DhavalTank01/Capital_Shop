@@ -127,9 +127,11 @@
 #text-carousel-section {
   background-color: #f3ead8;
   #slick-carousel-5 {
-    width: 70%;
+    width: 100%;
+    padding: 10px 0px;
     display: block;
     margin: auto;
+
     .fa-chevron-left {
       position: relative;
       top: 180px;

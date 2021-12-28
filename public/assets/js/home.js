@@ -67,7 +67,7 @@ $().ready(function () {
     autoplaySpeed: 3000,
     accessibility: true,
     adaptiveHeight: true,
-    arrows: true,
+    arrows: false,
     prevArrow: '<i class="fas fa-chevron-left"></i>',
     nextArrow: '<i class="fas fa-chevron-right"></i>',
   });
